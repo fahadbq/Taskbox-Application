@@ -19,7 +19,7 @@ const AddTask = (props) => {
     }
 
     return (
-        <div style={{position: "fixed", top: "85px", left: "700px", width: "200px"}} >
+        <div style={{position: "absolute", top: "85px", right: "300px", width: "200px"}} >
             <h2> Add Task </h2>
             <TaskForm
                 formSubmission={formSubmission}

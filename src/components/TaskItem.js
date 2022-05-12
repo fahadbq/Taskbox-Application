@@ -32,7 +32,8 @@ const TaskItem = (props) =>{
                     />
 
                     <button onClick={handleToggle} > cancel </button>
-                </div>    
+                    <hr />
+                </div>
                 ) : (
                     <div>
                         { status ? <h3 style={{color: "green"}} > {title} </h3> : <h3 style={{color: "red"}}> {title} </h3> }
@@ -40,7 +41,8 @@ const TaskItem = (props) =>{
 
                         <button onClick={ () => {
                             handleRemove(id)
-                        } } className="btn-danger" > remove </button>
+                        } } className="btn-danger" style={{position: "absolute", right: "650px" }} > remove </button>
+                        <hr />
                     </div>
                 )
             }

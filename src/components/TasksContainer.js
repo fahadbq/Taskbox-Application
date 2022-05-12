@@ -15,7 +15,7 @@ const TasksContainer = (props) => {
 
     return (
         <div className="container">
-            <h1>Task box</h1> <br />
+            <h1 style={{marginTop: "20px"}} >Task box</h1> <br />
 
             <TasksList />
 

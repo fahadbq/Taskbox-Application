@@ -7,7 +7,7 @@ const TasksList = (props) => {
     const { tasks } = useSelector((state) => state)
 
     return (
-        <div style={{width: "500px"}}>
+        <div style={{width: "800px"}}>
             {tasks.loading ? (<h2> loading </h2>
             ) : (
                 <div>
