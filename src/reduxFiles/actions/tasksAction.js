@@ -14,7 +14,7 @@ export const C = {
 export const asyncGetTasks = () =>{
 
     return (dispatch) =>{
-        axios.get(`http://localhost:3033/api/tasks`)
+        axios.get(`https://localhost:3033/api/tasks`)
             .then((res) =>{
                 const taskArr = res.data
                 dispatch(getTasks(taskArr))
@@ -29,7 +29,7 @@ export const asyncGetTasks = () =>{
 export const asyncAddTask = (formData, checkIsSaved) => {
     
     return (dispatch) =>{
-        axios.post(`http://localhost:3033/api/tasks`, formData)
+        axios.post(`https://localhost:3033/api/tasks`, formData)
             .then( (res) =>{
                 const taskObj = res.data
                 dispatch(addTask(taskObj))
@@ -45,7 +45,7 @@ export const asyncAddTask = (formData, checkIsSaved) => {
 export const asyncEditTask = (formData, handleToggle) =>{
     
     return (dispatch) =>{
-        axios.put(`http://localhost:3033/api/tasks/${formData.id}`, formData)
+        axios.put(`https://localhost:3033/api/tasks/${formData.id}`, formData)
             .then((res) =>{
                 const result = res.data
                 dispatch(editTask(result))
@@ -62,7 +62,7 @@ export const asyncRemoveItem = (id) =>{
     return (dispatch) =>{
         const confirmRemove = window.confirm('Are you sure ?')
         if(confirmRemove) {
-            axios.delete(`http://localhost:3033/api/tasks/${id}`)
+            axios.delete(`https://localhost:3033/api/tasks/${id}`)
                 .then((res) =>{
                     dispatch(removeItem(res.data.id))
                 })
